@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
-import Count from "./Counter";
+import Todo from "./Todo";
+
+
+
+
 
 const  App= () => {
-    return (
+
+
+
+
+
+
+  return (
       <div className="App">
-
-        <h2>Counter Program</h2>
-        <Count />
-        
-
+       
+        <Todo />
       </div>
-    )
-  };
 
+        );
+
+    }
+        
 export default App;

@@ -44,3 +44,17 @@
     transform: rotate(360deg);
   }
 }
+#inc{
+  color: rgb(62, 234, 35);
+  background-color: rgb(49, 47, 47);
+}
+
+#res{
+  color: whitesmoke;
+  background-color: black;
+}
+
+#dec{
+  color: red;
+  background-color: #1e2024;
+}

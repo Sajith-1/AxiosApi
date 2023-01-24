@@ -1,38 +1,15 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
-const Todo =()=>{
+import { useParams } from "react-router-dom";
 
-    const [todos, setTodos] = useState();
 
-    useEffect(()=>{
-        axios.get('https://jsonplaceholder.typicode.com/todos').then((res)=>{
-            const something = res.data
-            setTodos(something);
-        })
-    },[]);
-
+const Todo = ()=>{
+    const {id} = useParams();
     return(
-        <div>
-            <h2>Todos</h2>
-            {todos &&todos.map((todo)=>{
-                const {userId, id, title, completed} = todo;
-                return(
-                    <div key={id}>
-                        <h5>{title}</h5>
-                        {id}
-                        {userId}
-                         
-                    </div>
-                )
-            })}
-
-            
-
-
-        </div>
-
+        <p>{`This is the Todo component and the todo id is : ${id}`}</p>
     )
-}
+};
 
-export default Todo
+
+export default Todo;
+
